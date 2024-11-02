@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hamotaghi"
+    }
+  },
+  "defaultProject": "hamotaghi",
+  "cli": {
+    "analytics": "accf45c5-adaa-46af-99d9-dbd484c09a46"
+  }
 }
