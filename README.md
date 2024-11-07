@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## angular and node version
 angular cli version: 10.2.4
-node version: 18.20.4
+node version: 16.20.2
