@@ -1,12 +1,12 @@
 @import "../node_modules/bootstrap/scss/functions";
 // Include any default variable overrides here
-$primary: #1E2748;
+$primary: #1e2748;
 $border-radius: 4px;
 
 @import "../node_modules/bootstrap/scss/variables";
 
 $theme-colors: (
-  "primary": $primary
+  "primary": $primary,
 );
 
 $colors: map-remove(
@@ -65,30 +65,37 @@ $spacers: map-merge($spacers, $custom-spacers);
 @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/spinners";
 // @import "../node_modules/bootstrap/scss/offcanvas";
-
+//
+@import "./assets/scss/bootstrap-grid.rtl.min.scss";
+//
+.btn-primary:hover {
+  color: $primary;
+  background-color: #fff;
+  border-color: $primary;
+}
 // Typography
 $font-families: (
   IRANSans: (
     weights: (
       // Font Weights: 300 400 500 600 700 900
-    //   200: "extralight",
+      //   200: "extralight",
       300: "light",
       400: "Regular",
       500: "Medium",
       700: "Bold",
-    //   900: "Black" 
+      //   900: "Black"
     ),
     path: "./assets/fonts",
   ),
-  Peyda:(
+  Peyda: (
     weights: (
       // Font Weights: 300 400 500 600 700 900
-    //   200: "extralight",
+      //   200: "extralight",
       300: "light",
       400: "Regular",
       500: "Medium",
       700: "Bold",
-    //   900: "Black" 
+      //   900: "Black"
     ),
     path: "./assets/fonts",
   ),
@@ -137,14 +144,12 @@ $font-families: (
   map-get(map-get($font-families, "IRANSans"), "weights")
 );
 
-@include font-face(
-  Peyda,
-  map-get(map-get($font-families, "Peyda"), "weights")
-);
-
-body, html{
-    font-family: "IRANSans", sans-serif !important;
-   text-align: right;
+@include font-face(Peyda, map-get(map-get($font-families, "Peyda"), "weights"));
+//
+body,
+html {
+  font-family: "IRANSans", sans-serif !important;
+  text-align: right;
 }
 .h1,
 .h2,
@@ -159,4 +164,19 @@ h4,
 h5,
 h6 {
   font-family: "Peyda", sans-serif !important;
+}
+img {
+  width: 100%;
+}
+.ho-section {
+  margin-top: 165px;
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+  }
+}
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
