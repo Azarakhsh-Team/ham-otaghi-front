@@ -1,4 +1,11 @@
-h2 {
+.ho-section {
+  margin-top: 165px;
+
+  @media screen and (max-width: 768px) {
+      margin-top: 100px;
+  }
+}
+.landing-title {
   position: relative;
   margin: 0 0 1.5rem;
   @media screen and (max-width: 768px) {
