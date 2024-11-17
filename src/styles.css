@@ -1,2 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "./assets/scss/bootstrap-grid.rtl.min.scss";
+@import "./assets/fonts/style.css";
+
+:root {
+    --primary-color: #1e2748;
+    --blue: #1e2748 !important;
+    --border-radius: 4px;
+}
+
+/* General Styles */
+.btn-primary {
+    border-radius: var(--border-radius);
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    color: var(--primary-color);
+    background-color: #fff;
+    border-color: var(--primary-color);
+}
+
+img {
+    width: 100%;
+}
+
+/* Footer Styles */
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
