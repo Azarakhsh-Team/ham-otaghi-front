@@ -1,0 +1,91 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./woff/IRANSansWeb-light.woff") format("woff"),
+    url("./woff2/IRANSansWeb-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./woff/IRANSansWeb-Regular.woff") format("woff"),
+    url("./woff2/IRANSansWeb-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./woff/IRANSansWeb-Medium.woff") format("woff"),
+    url("./woff2/IRANSansWeb-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./woff/IRANSansWeb-Bold.woff") format("woff"),
+    url("./woff2/IRANSansWeb-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Peyda;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./woff/PeydaWeb-light.woff") format("woff"),
+    url("./woff2/PeydaWeb-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Peyda;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./woff/PeydaWeb-Regular.woff") format("woff"),
+    url("./woff2/PeydaWeb-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Peyda;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./woff/PeydaWeb-Medium.woff") format("woff"),
+    url("./woff2/PeydaWeb-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Peyda;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./woff/PeydaWeb-Bold.woff") format("woff"),
+    url("./woff2/PeydaWeb-Bold.woff2") format("woff2");
+}
+body,
+html {
+  font-family: "IRANSans", sans-serif !important;
+  text-align: right;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Peyda", sans-serif !important;
+}
