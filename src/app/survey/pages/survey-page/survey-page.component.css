@@ -1,0 +1,23 @@
+.survey-page__wrapper {
+  min-height: calc(100dvh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.survey__icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.survey__description {
+  max-width: 633px;
+}
