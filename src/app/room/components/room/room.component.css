@@ -1,0 +1,15 @@
+:host .room__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:host .room__divider {
+  border: 2px solid var(--primary-color);
+}
+
+:host .room__roommates {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+}

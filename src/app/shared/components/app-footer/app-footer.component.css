@@ -1,0 +1,11 @@
+footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 34px 0;
+}
+
+footer .copyright img {
+  width: 32px;
+}

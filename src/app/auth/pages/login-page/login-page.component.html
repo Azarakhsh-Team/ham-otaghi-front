@@ -1,0 +1,58 @@
+<div class="container">
+  <form class="form" [formGroup]="formGroup" (ngSubmit)="handleLogin()">
+    <div class="d-flex flex-column align-items-center mb-3">
+      <img
+        class="mb-2"
+        src="assets/images/hamotaghi-logo.png"
+        alt="logo"
+        width="40"
+        height="40"
+      />
+      <div class="font-weight-bold">هم اتاقی</div>
+    </div>
+
+    <h1 class="mb-4 f-peyda text-center">ورود</h1>
+
+    <div class="form-group">
+      <label for="email" class="w-100">ایمیل</label>
+      <input
+        type="email"
+        formControlName="email"
+        name="email"
+        placeholder="name@example.com"
+        class="w-100 ltr form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="mt-15 w-100">رمز عبور</label>
+      <input
+        type="password"
+        formControlName="password"
+        name="password"
+        class="w-100 ltr form-control"
+      />
+    </div>
+
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="formGroup.invalid"
+    >
+      ورود به هم اتاقی
+    </button>
+    <a
+      class="d-flex align-items-center justify-content-center mt-2"
+      routerLink="/auth/register"
+    >
+      حساب کاربری ندارید؟ ثبت نام کنید!
+    </a>
+    <a
+      class="d-flex align-items-center justify-content-center mt-4"
+      routerLink="/"
+    >
+      <div class="mx-2">بازگشت</div>
+      <img width="20" height="20" src="assets/images/arrow.png" />
+    </a>
+  </form>
+</div>
