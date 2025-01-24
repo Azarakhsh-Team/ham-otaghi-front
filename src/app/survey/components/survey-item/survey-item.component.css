@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.survey__question {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.survey__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.survey__item {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.survey__item i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.survey__item i.active {
+  background-color: var(--primary-color);
+}
