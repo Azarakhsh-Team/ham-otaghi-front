@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 70px;
+  border-radius: 28px;
+  border: 1px solid var(--primary-color);
+}
