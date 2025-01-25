@@ -1,0 +1,180 @@
+<div class="container">
+  <form class="py-4 form" [formGroup]="formGroup" (ngSubmit)="handleRegister()">
+    <div class="d-flex flex-column align-items-center mb-3">
+      <img
+        class="mb-2"
+        src="assets/images/hamotaghi-logo.png"
+        alt="logo"
+        width="40"
+        height="40"
+      />
+      <div class="font-weight-bold">هم اتاقی</div>
+    </div>
+
+    <h1 class="mb-4 f-peyda text-center">ثبت نام</h1>
+
+    <div class="form-group">
+      <label for="first_name" class="mt-15 w-100">نام</label>
+      <input
+        type="text"
+        formControlName="first_name"
+        name="first_name"
+        class="w-100 form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="last_name" class="mt-15 w-100">نام خانوادگی</label>
+      <input
+        type="text"
+        formControlName="last_name"
+        name="last_name"
+        class="w-100 form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="w-100">ایمیل</label>
+      <input
+        type="email"
+        formControlName="email"
+        name="email"
+        placeholder="name@example.com"
+        class="w-100 ltr form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="mt-15 w-100">رمز عبور</label>
+      <input
+        type="password"
+        formControlName="password"
+        name="password"
+        class="w-100 ltr form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="username" class="mt-15 w-100">نام کاربری</label>
+      <input
+        type="text"
+        formControlName="username"
+        name="username"
+        class="w-100 ltr form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="gender" class="mt-15 w-100">جنسیت</label>
+      <select
+        name="gender"
+        id="gender"
+        formControlName="gender"
+        class="w-100 form-control"
+      >
+        <option *ngFor="let gender of genders" [value]="gender">
+          {{ gender }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="age" class="mt-15 w-100">سن</label>
+      <input
+        type="number"
+        formControlName="age"
+        name="age"
+        class="w-100 ltr form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="country" class="mt-15 w-100">کشور</label>
+      <input
+        type="text"
+        formControlName="country"
+        name="country"
+        class="w-100 form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="city" class="mt-15 w-100">شهر</label>
+      <input
+        type="text"
+        formControlName="city"
+        name="city"
+        class="w-100 form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="entry_year" class="mt-15 w-100">سال ورود</label>
+      <select
+        name="entry_year"
+        id="entry_year"
+        formControlName="entry_year"
+        class="w-100 form-control"
+      >
+        <option *ngFor="let entry_year of entryYears" [value]="entry_year">
+          {{ entry_year }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="education_level" class="mt-15 w-100">پایه تحصیلی</label>
+      <select
+        name="education_level"
+        id="education_level"
+        formControlName="education_level"
+        class="w-100 form-control"
+      >
+        <option
+          *ngFor="let education_level of educationLevels"
+          [value]="education_level"
+        >
+          {{ education_level }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="field_of_study" class="mt-15 w-100">رشته تحصیلی</label>
+      <select
+        name="field_of_study"
+        id="field_of_study"
+        formControlName="field_of_study"
+        class="w-100 form-control"
+      >
+        <option
+          *ngFor="let field_of_study of fieldsOfStudy"
+          [value]="field_of_study"
+        >
+          {{ field_of_study }}
+        </option>
+      </select>
+    </div>
+
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="formGroup.invalid"
+    >
+      ثبت نام
+    </button>
+    <a
+      class="d-flex align-items-center justify-content-center mt-2"
+      routerLink="/auth/login"
+    >
+      حساب کاربری دارید؟ وارد شوید
+    </a>
+    <a
+      class="d-flex align-items-center justify-content-center mt-4"
+      routerLink="/"
+    >
+      <div class="mx-2">بازگشت</div>
+      <img width="20" height="20" src="assets/images/arrow.png" />
+    </a>
+  </form>
+</div>
