@@ -1,3 +1,4 @@
-<survey-item></survey-item>
-<survey-item></survey-item>
-<survey-item></survey-item>
+<survey-item
+  *ngFor="let question of questions$ | async"
+  [data]="question"
+></survey-item>

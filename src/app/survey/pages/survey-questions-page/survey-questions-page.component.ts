@@ -1,23 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SurveyService } from '../../api';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'survey-questions-page',
   templateUrl: './survey-questions-page.component.html',
   styleUrls: ['./survey-questions-page.component.css'],
 })
-export class SurveyQuestionsPageComponent implements OnInit {
+export class SurveyQuestionsPageComponent {
   constructor(
-    private readonly _surveyService: SurveyService,
-    private readonly _router: Router
+    private readonly _router: Router,
+    private readonly _surveyService: SurveyService
   ) {}
 
-  ngOnInit(): void {
-    this._surveyService.getQuestions();
+  get areAllQuestionsAnswered$(): Observable<boolean> {
+    return this._surveyService.areAllQuestionsAnswered$;
   }
 
   handleSubmit(): void {
-    this._router.navigateByUrl('/profile/room/suggested');
+    this._surveyService.submitChoices();
   }
 }

@@ -28,7 +28,7 @@ export class AuthService {
         this._storageService.setRefreshToken(response.refresh);
         this.isAuthorized$.next(true);
         this._toastrService.success('با موفقیت وارد شدید!');
-        this._router.navigateByUrl('/profile');
+        setTimeout(() => this._router.navigateByUrl('/profile'), 1);
       },
       error: () => {
         this.isAuthorized$.next(false);
@@ -40,14 +40,14 @@ export class AuthService {
     this._storageService.removeAccessToken();
     this._storageService.removeRefreshToken();
     this.isAuthorized$.next(false);
-    this._router.navigateByUrl('/auth/login');
+    setTimeout(() => this._router.navigateByUrl('/auth/login'), 1);
   }
 
   public register(dto: Auth.RegisterDto): void {
     this._restService.register(dto).subscribe({
       next: (response) => {
         this._toastrService.success('ثبت نام با موفقیت انجام شد!');
-        this._router.navigateByUrl('/auth/login');
+        setTimeout(() => this._router.navigateByUrl('/auth/login'), 1);
       },
       error: () => {
         this.isAuthorized$.next(false);

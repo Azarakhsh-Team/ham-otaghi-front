@@ -12,7 +12,8 @@ export class AbstractRESTService {
     protected readonly _http: HttpClient,
     protected readonly _storageService: StorageService
   ) {
-    this._serverUrl = 'https://ham-otaghi-back.joobkenar.ir';
+    // this._serverUrl = 'https://ham-otaghi-back.joobkenar.ir';
+    this._serverUrl = 'https://hamotaghifind.liara.run';
   }
 
   protected setHeaders(): HttpHeaders {

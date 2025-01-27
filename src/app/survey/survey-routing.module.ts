@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SurveyPageComponent, SurveyQuestionsPageComponent } from './pages';
+import { QuestionsResolver } from './resolvers';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'questions',
+    resolve: [QuestionsResolver],
     component: SurveyQuestionsPageComponent,
   },
 ];
