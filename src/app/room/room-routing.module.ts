@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RoomGuard } from './guards';
 import { CurrentRoomPageComponent, SuggestedRoomsPageComponent } from './pages';
+import { SuggestedRoomsResolver } from './resolvers';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'suggested',
+    resolve: {
+      suggestedRooms: SuggestedRoomsResolver,
+    },
     component: SuggestedRoomsPageComponent,
   },
 ];
