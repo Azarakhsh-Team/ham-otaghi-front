@@ -1,12 +1,12 @@
 <div class="room__header">
-  <h4 class="m-0">اتاق پیشنهادی ۱</h4>
+  <h4 class="m-0">اتاق پیشنهادی {{ persianIndexText }}</h4>
   <button class="btn btn-primary btn-outlined">ارسال درخواست هم‌اتاقی</button>
 </div>
 
 <hr class="room__divider" />
 
 <div class="room__roommates">
-  <roommate></roommate>
-  <roommate></roommate>
-  <roommate></roommate>
+  <roommate [index]="0"></roommate>
+  <roommate [index]="1"></roommate>
+  <roommate [index]="2"></roommate>
 </div>

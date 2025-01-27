@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SurveyService } from '../../api';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'survey-questions-page',
@@ -7,9 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./survey-questions-page.component.css'],
 })
 export class SurveyQuestionsPageComponent {
-  constructor(private readonly _router: Router) {}
+  constructor(
+    private readonly _router: Router,
+    private readonly _surveyService: SurveyService
+  ) {}
+
+  get areAllQuestionsAnswered$(): Observable<boolean> {
+    return this._surveyService.areAllQuestionsAnswered$;
+  }
 
   handleSubmit(): void {
-    this._router.navigateByUrl('/profile/room/suggested');
+    this._surveyService.submitChoices();
   }
 }

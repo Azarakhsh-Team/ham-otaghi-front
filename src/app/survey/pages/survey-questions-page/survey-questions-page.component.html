@@ -9,7 +9,11 @@
       <survey-questions></survey-questions>
     </div>
     <div class="col-12 mt-3 text-center">
-      <button class="btn btn-primary" (click)="handleSubmit()">
+      <button
+        class="btn btn-primary"
+        [disabled]="(areAllQuestionsAnswered$ | async) === false"
+        (click)="handleSubmit()"
+      >
         تکمیل و مشاهده هم‌اتاقی‌ها
       </button>
     </div>

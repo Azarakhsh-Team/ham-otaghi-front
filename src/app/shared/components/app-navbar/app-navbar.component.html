@@ -5,9 +5,17 @@
         <img src="assets/images/svg/hamotaghi-full-logo.svg" alt="Logo" />
       </a>
 
-      <div class="d-flex align-items-center">
-        <a class="btn btn-primary" routerLink="/auth"> ورود </a>
-      </div>
+      <ng-container *ngIf="isAuthorized$ | async; else loginActions">
+        <div class="d-flex align-items-center">
+          <a class="btn btn-primary mx-1" routerLink="/profile"> پروفایل </a>
+          <a class="btn btn-danger" (click)="handleLogout()"> خروج </a>
+        </div>
+      </ng-container>
+      <ng-template #loginActions>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-primary" routerLink="/auth"> ورود </a>
+        </div>
+      </ng-template>
     </nav>
   </div>
 </div>
